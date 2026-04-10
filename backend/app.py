@@ -47,7 +47,7 @@ app.config.from_object(cfg)
 
 # ── CORS: permitir peticiones desde el frontend (otra EC2) ─────────
 # CORS(app, origins=[cfg.FRONTEND_URL], supports_credentials=True)
-CORS(app, supports_credentials=True)
+CORS(app)
 
 
 # ── Registrar blueprints ───────────────────────────────────────────
