@@ -42,7 +42,9 @@ export const api = {
 /** Helpers de sesión */
 export const auth = {
   login: async (username, password) => {
-    const res = await fetch(`${BASE}/auth/login`, {
+    // const res = await fetch(`${BASE}/auth/login`, {
+    const res = await fetch(`${BASE}/login`, {
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),
