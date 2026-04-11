@@ -51,11 +51,11 @@ CORS(app)
 
 
 # ── Registrar blueprints ───────────────────────────────────────────
-app.register_blueprint(auth_bp)
-app.register_blueprint(especialidades_bp)
-app.register_blueprint(doctores_bp)
-app.register_blueprint(pacientes_bp)
-app.register_blueprint(citas_bp)
+app.register_blueprint(auth_bp, url_prefix="/api")
+app.register_blueprint(especialidades_bp, url_prefix="/api")
+app.register_blueprint(doctores_bp, url_prefix="/api")
+app.register_blueprint(pacientes_bp, url_prefix="/api")
+app.register_blueprint(citas_bp, url_prefix="/api")
 
 
 # ── Health check ───────────────────────────────────────────────────
